@@ -1,3 +1,4 @@
+
 /**
  * A simple Car implementation
  */
@@ -42,9 +43,9 @@ public class Car  {
     }
 
     // MODIFIES: this
-    // EFFECTS: sets the condition to broken if there is the ditance travelled is too big
-    // for this model assume that 1000 is enough to break a car
-    public void broken() {
+    // EFFECTS: returns true is the car's condition is broken
+    public boolean isBroken() {
+        return false;
         //TODO: implement the method
 
     }
@@ -73,7 +74,9 @@ public class Car  {
     // REQUIRES: condition is "working"
     // distance > 0 AND distance <= getDistanceUntilEmpty()
     // MODIFIES: this
-    // EFFECTS: move the car at a specified speed for given time
+    // EFFECTS: move the car at a specified speed for given time, increase the distance travelled, decreases the fuel
+    // sets the condition to broken if there is the ditance travelled is too big
+    // for this model assume that 1000 is enough to break a car
     public void drive(int speed, int time) {
         // assume the acceleration is uniform and car moves at a constant speed km/h
         int distance;
